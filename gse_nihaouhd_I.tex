@@ -107,7 +107,7 @@ As summarised by \citet{Helmi2020}, the focus has now shifted from merely identi
 To further test and refine this scenario, we turn to a different simulation suite: the NIHAO-UHD project, which provides high-resolution, fully cosmological zoom-in simulations of Milky Way-type galaxies undergoing satellite accretion \citep{Buck2020, Buck2020b, Buck2021}. Unlike the idealised N-body simulations by \citet{Mori2024}, NIHAO-UHD self-consistently models the chemical and dynamical evolution of stars within a hierarchical cosmological context \citep{Buck2021}. 
 The simulation in particular also includes two post-processing steps that make it particularly well suited to study the chemodynamical memory of the galaxy and its major mergers. Firstly, we have traced the birth positions of stars in discrete $100\,\mathrm{Myr}$ time steps, enabling a clean separation of in-situ from accreted stars\footnote{Potential inaccuracies arise around the time of the major merger itself.}. Secondly, we have calculated the same integrals of motion, that is orbit energies and actions for the Milky Way analogue simulation that are calculated for stars in our Milky Way galaxy.
 
-In this first paper (Paper I) of the series we address the following questions: 
+In this first paper (Paper I) we address the following questions: 
 \begin{enumerate}[leftmargin=2em,labelwidth=0em]
     \item What can we learn about the selection efficiency of accreted stars in integrals of motions phase-space \citep{Helmi2018, Feuillet2021, Buder2022, Monty2024}?
     \item What memory of the birth positions and past chemical evolution is retained in integrals of motion space \citep{Skuladottir2025}?
@@ -122,11 +122,11 @@ By answering these questions with a Milky Way analogue simulation, we reveal a p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulated data} \label{sec:data}
 
-In this study we examine the high-resolution cosmological zoom-in simulation \texttt{g8.26e11}, a Milky Way analogue from the \textit{Numerical Investigation of a Hundred Astronomical Objects} (NIHAO) simulation suite \citep{Wang2015} that includes newly available chemical-evolution tracing.
+In this study we examine the high-resolution cosmological zoom-in simulation \texttt{g8.26e11}, a Milky Way analogue from the \textit{Numerical Investigation of a Hundred Astronomical Objects} (NIHAO) simulation suite \citep{Wang2015} that includes newly available chemical-evolution tracing \citep{Buck2021}.
 We use \texttt{g8.26e11} because, as described below, it closely matches several key Milky Way properties — halo and stellar mass, rotation curve, and a disk-dominated, multi-armed spiral morphology — and experienced a major merger at a lookback time comparable to the Milky Way's last major merger.
 Although the model does not form a strong bar \citep[see][]{Buder2025}, we argue that this is not critical for the questions addressed here.
 
-This galaxy model forms part of the NIHAO-UHD series \citep{Buck2020b} and has been utilised in several prior investigations, including work on the properties of Milky Way satellites \citep{Buck2019b}, the spin of the Galactic dark matter halo \citep{Obreja2022}, abundance clustering to reconstruct birth conditions of stars \citep{Ratcliffe2022}, and the redshift evolution as well as shape of radial metallicity gradients in the ISM \citep{Ratcliffe2025, Buder2025}. A version of this simulation with reduced mass resolution was also employed by \citet{Buck2023} and \citet{Buder2024} to explore the chemical tagging of stars associated with its last significant accretion event (\textit{GSE}).
+This galaxy model forms part of the NIHAO-UHD series \citep{Buck2020b} and has been utilised in several prior investigations, including work on the properties of Milky Way satellites \citep{Buck2019b}, the spin of the Galactic dark matter halo \citep{Obreja2022}, abundance clustering to reconstruct birth conditions of stars \citep{Ratcliffe2022}, and the redshift evolution as well as shape of radial metallicity gradients in the ISM \citep{Ratcliffe2025, Buder2025}. A version of this simulation was also employed by \citet{Buck2023} and with reduced mass resolution by \citet{Buder2024} to explore the chemical tagging of stars associated with its last significant accretion event (\textit{GSE}).
 
 We briefly describe the simulation with reference to the above mentioned works in Sec.~\ref{sec:data_simulation}. The main new insights for this simulation are provided by additional information on the birth positions of star particles (see Fig.~\ref{fig:tracing_insitu_accretion_2}) as well as orbit properties, which we describe in Secs.~\ref{sec:data_birth_positions} and \ref{sec:data_orbit_properties}, respectively.
 
@@ -154,7 +154,7 @@ rather than the cylindrical one, which is often used when focusing on studies of
     \label{fig:tracing_insitu_accretion_3}
 \end{figure}
 
-Due to computational constraints, stars in the simulation are represented by tracer particles corresponding to simple stellar populations of uniform age, metallicity, and initial mass function (IMF). Chemical enrichment is computed using the \textsc{Chempy} framework \citep{Rybizki2017}, implemented by \citet{Buck2021}. We adopt the \texttt{alt} configuration, assuming a \citet{Chabrier2003} IMF with a high-mass slope of $\alpha_\text{IMF} = -2.3$ , spanning stellar masses from 0.1 to $100\,\mathrm{M_\odot}$, and covering metallicities $Z/Z_\odot \in [10^{-5},2]$. The enrichment includes contributions from asymptotic giant branch (AGB) stars, core-collapse supernovae (CCSN; $8 - 40\,\mathrm{M_\odot}$), and Type Ia supernovae (SNIa), modelled with an exponential delay-time distribution (slope $-1.12$), a minimum delay of $40\,\mathrm{Myr}$, and a normalised rate of $log_{10}(N_\mathrm{Ia}) = -2.9$. Yields are taken from \citet[][CCSN]{Chieffi2004}, \citet[][SNIa]{Seitenzahl2013}, and \citet[][AGB; \texttt{new\_fid} yields in \citealt{Buck2021}]{Karakas2016}, but no additional contributions, for example from neutron star mergers, for the rapid neutron-capture process. The simulation tracks elemental abundances for H, He, C, N, O, Ne, Mg, Al, Si, P, S, V, Cr, Mn, Fe, Co, and Ba on a Solar abundance scale by \citet{Asplund2009}. In alignment with the approach in \citet{Buder2025} and differing from \citet{Buder2024}, we adopt the simulated abundances directly, without applying empirical offsets. We note, however, that the median $\mathrm{[Fe/H]}$ for stars within a Solar-like galactocentric cylindrical radius of $R_\mathrm{GC} = \sqrt{x^2+y^2} = 8.2 \pm 0.5\,\mathrm{kpc}$ \citep{BlandHawthorn_Gerhard2016} and Solar-like age of $4.5 \pm 0.5\,\mathrm{Gyr}$ \citep{Soderblom2010} is $+0.15\,\mathrm{dex}$ and thus slightly enhanced with respect to the actual Milky Way. The star formation history, approximated by the stellar age histogram in Fig.~\ref{fig:tracing_insitu_accretion_3}a, of our analogue and Milky Way estimates \citep{Snaith2015} is qualitatively similar with steep rise from high redshifts to cosmic noon and a decreasing star formation thereafter. However, both quantitative differences as well as our chosen yields and other chemical evolution parameters can explain the offsets in abundances \citep[see also][]{Buck2021}.
+Due to computational constraints, stars in the simulation are represented by tracer particles corresponding to simple stellar populations of uniform age, metallicity, and initial mass function (IMF). Chemical enrichment is computed using the \textsc{Chempy} framework \citep{Rybizki2017}, implemented by \citet{Buck2021}. We adopt the \texttt{alt} configuration, assuming a \citet{Chabrier2003} IMF with a high-mass slope of $\alpha_\text{IMF} = -2.3$ , spanning stellar masses from 0.1 to $100\,\mathrm{M_\odot}$, and covering metallicities $Z/Z_\odot \in [10^{-5},2]$. The enrichment includes contributions from asymptotic giant branch (AGB) stars, core-collapse supernovae (CCSN; $8 - 40\,\mathrm{M_\odot}$), and Type Ia supernovae (SNIa), modelled with an exponential delay-time distribution (slope $-1.12$), a minimum delay of $40\,\mathrm{Myr}$, and a normalised rate of $log_{10}(N_\mathrm{Ia}) = -2.9$ (see \citealt{Buck2025,Guenes2025} for a Bayesian aproach to selecting these parameters). Yields are taken from \citet[][CCSN]{Chieffi2004}, \citet[][SNIa]{Seitenzahl2013}, and \citet[][AGB; \texttt{new\_fid} yields in \citealt{Buck2021}]{Karakas2016}, but no additional contributions, for example from neutron star mergers, for the rapid neutron-capture process. The simulation tracks elemental abundances for H, He, C, N, O, Ne, Mg, Al, Si, P, S, V, Cr, Mn, Fe, Co, and Ba on a Solar abundance scale by \citet{Asplund2009}. In alignment with the approach in \citet{Buder2025} and differing from \citet{Buder2024}, we adopt the simulated abundances directly, without applying empirical offsets. We note, however, that the median $\mathrm{[Fe/H]}$ for stars within a Solar-like galactocentric cylindrical radius of $R_\mathrm{GC} = \sqrt{x^2+y^2} = 8.2 \pm 0.5\,\mathrm{kpc}$ \citep{BlandHawthorn_Gerhard2016} and Solar-like age of $4.5 \pm 0.5\,\mathrm{Gyr}$ \citep{Soderblom2010} is $+0.15\,\mathrm{dex}$ and thus slightly enhanced with respect to the actual Milky Way. The star formation history, approximated by the stellar age histogram in Fig.~\ref{fig:tracing_insitu_accretion_3}a, of our analogue and Milky Way estimates \citep{Snaith2015} is qualitatively similar with steep rise from high redshifts to cosmic noon and a decreasing star formation thereafter. However, both quantitative differences as well as our chosen yields and other chemical evolution parameters can explain the offsets in abundances \citep[see also][]{Buck2021}.
 
 \subsection{Tracing birth positions for stars of the main galaxy body}  \label{sec:data_birth_positions}
 
@@ -253,9 +253,9 @@ In Fig.~\ref{fig:lz_e_jr}, we are especially intrigued by the extended distribut
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/fraction_accreted_in_situ_lz_e.png}
-    \includegraphics[width=\linewidth]{figures/fraction_accreted_in_situ_lz_jr.png}
-    \caption{Angular momentum $J_\varphi \equiv L_Z$ vs. Specific energy $E$ (top panel) and radial action $J_R$ for stars (bottom panel) for stars within $R_\mathrm{3D} < 50\,\mathrm{kpc}$ at redshift $z=0$. Bins are coloured by the fraction of previously accreted stars (defined as Figs.~\ref{fig:lz_e_jr}b/(a+b) and \ref{fig:lz_e_jr}d/(d+e), respectively). We have added the selection proposed by \citet{Feuillet2020} for the real Milky Way as dashed black box. For a figure that includes ongoing accretion ($R_\mathrm{3D} > 50\,\mathrm{kpc}$) in the denominator, see Fig.~\ref{fig:fraction_accreted_in_situ_lz_total}~\href{https://github.com/svenbuder/gse_nihaouhd/tree/main/figures}{\faGithub}.}
+    \includegraphics[width=0.94\linewidth]{figures/fraction_accreted_in_situ_lz_e.png}
+    \includegraphics[width=0.94\linewidth]{figures/fraction_accreted_in_situ_lz_jr.png}
+    \caption{Angular momentum $J_\varphi \equiv L_Z$ vs. Specific energy $E$ (top panel) and radial action $J_R$ for stars (bottom panel) for stars within $R_\mathrm{3D} < 50\,\mathrm{kpc}$ at redshift $z=0$. Bins are coloured by the fraction of previously accreted stars (defined as Figs.~\ref{fig:lz_e_jr}b/(a+b) and \ref{fig:lz_e_jr}d/(d+e), respectively). We have added the selection proposed by \citet{Feuillet2020} for the real Milky Way as dashed black box. Fig.~\ref{fig:fraction_accreted_in_situ_lz_total} also includes ongoing accretion in the denominator \href{https://github.com/svenbuder/gse_nihaouhd/tree/main/figures}{\faGithub}.}
     \label{fig:fraction_accreted_in_situ_lz}
 \end{figure}
 
@@ -265,38 +265,27 @@ For the simulated Milky Way analogue, we find that the accreted stars dominate i
 
 For completeness, we have also calculated the percentage ratio of previously accreted stars to all stars in each of the $L_Z$-$E$ and $L_Z$-$\sqrt{J_R}$ bins. We append them to this paper in Fig.~\ref{fig:fraction_accreted_in_situ_lz_total} to visualise the relatively minor contaminating effect of ongoing accretion at higher energies, similar to that of the Sagittarius dwarf spheroidal galaxy in the Milky Way. However, the overall estimate of selecting accreted stars from dominant regions does not shift significantly, that is, only from \input{tex/mass_accreted_fraction} to \input{tex/mass_accreted_fraction_total}. Similarly, including ongoing accretion to calculate the fraction in the $L_Z$ vs. $\sqrt{J_R}$ domain (compare Figs.~\ref{fig:fraction_accreted_in_situ_lz} and \ref{fig:fraction_accreted_in_situ_lz_total}a) insignificantly changed the selection ratio from \input{tex/mass_accreted_fraction_lz_jr} to \input{tex/mass_accreted_fraction_lz_jr_total}. As we are able to use the birth positions for a rather clean selection of in-situ and accreted stars, we can now turn to the analysis of the memory of the progenitor galaxy that might still be imprinted in the present-day properties of the accreted stars.
 
-\begin{table}
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \caption{Energy selections of the four zones of previously accreted stars used in Sec.~\ref{sec:analysis_chemodynamic_memory} and the median [Fe/H] in each bin, with error bars as in Fig.~\ref{fig:fe_h_histograms}.}
-    \begin{tabular}{cc} 
-    \hline\hline
-    Energy Selection & {[Fe/H]} \\
-    \hline
-    $ \qquad \quad ~~~\, E~/~\mathrm{kpc\,km\,s^{-1}}<-0.77$ & \input{tex/feh_percentiles_zone_4} \\
-    $-0.77 \leq E~/~\mathrm{kpc\,km\,s^{-1}} < -0.58$ & \input{tex/feh_percentiles_zone_3} \\
-    $-0.58 \leq E~/~\mathrm{kpc\,km\,s^{-1}} < -0.37$ & \input{tex/feh_percentiles_zone_2} \\
-    $ -0.37 \leq  E~/~\mathrm{kpc\,km\,s^{-1}}\qquad \quad ~~~\,$ & \input{tex/feh_percentiles_zone_1} \\
-    \hline
-    All energies & \input{tex/feh_percentiles_zone_0} \\
-    \hline\hline
-    \end{tabular}
-    \label{tab:energy_selection}
-    % \renewcommand{\arraystretch}{1.0}
-\end{table}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\columnwidth]{figures/fe_h_histograms.png}
-    \caption{Histograms of ${\mathrm{[Fe/H]}}$ distributions of the whole galaxy (grey), and its previously accreted stars with different orbit energies as given in Table \ref{tab:energy_selection} (more negative energies from red to yellow, as shown in the inset panel of $L_Z$ vs. $E$). The percentiles of each distribution are plotted at the top right of the figure and show an increase of average [Fe/H] with more negative energies. See \href{https://github.com/svenbuder/gse_nihaouhd/tree/main/figures}{\faGithub} for individual figures showing the build-up of this plot.}
-    \label{fig:fe_h_histograms}
-\end{figure}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dependence of the chemical and birth position on energy} \label{sec:analysis_chemodynamic_memory}
 % What chemical and birth position memory of the progenitor galaxy is retained in integrals of motion space \citep{Skuladottir2025}?
 
 After presenting an overview of the energies and actions of in-situ and, more importantly, accreted stars in the simulation, we focus on how the properties of accreted stars depend on orbital energy $E$. This question was already investigated by \citet{Skuladottir2025}, using a small sample of 33 accreted stars with high-quality chemical abundance measurements, which they divide into two samples of 20 and 13 stars with energies above or below $E = -0.45\times10^{5}\,\mathrm{kpc\,km\,s^{-1}}$, respectively. Our selection of accreted stars consists of a quarter of a million star particles, enabling us to dissect our simulated galaxy into more samples. We thus decide to divide the sample into quartiles, or `zones', of orbit energy, which we list in Table~\ref{tab:energy_selection} and visualise through the inset shown in Fig.~\ref{fig:fe_h_histograms}.
+
+\begin{table}
+    \centering
+    \renewcommand{\arraystretch}{1.25}
+    \caption{Iron abundances [Fe/H] and stellar masses $M_\bigstar$ for the four energy-selected zones of previously accreted stars defined in Sec.~\ref{sec:analysis_chemodynamic_memory}. Median [Fe/H] values with $16^\mathrm{th}$–$84^\mathrm{th}$ percentiles are shown in Fig.~\ref{fig:fe_h_histograms}. Three logarithmic stellar masses (discussed in Sec.~\ref{sec:discussion_strategy_finding_gse_members}) are indicated: the total mass of the selected star particles ($\Sigma$), and the inferred masses from the reversed mass–metallicity relations of \citet[][Eq.~\ref{eq:naidu}]{Naidu2022b} and \citet[][Eq.~\ref{eq:kirby}]{Kirby2013}.}
+    \input{tables/feh_and_mass}
+    \label{tab:energy_selection}
+    \renewcommand{\arraystretch}{1.0}
+\end{table}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/fe_h_histograms.png}
+    \caption{Histograms of ${\mathrm{[Fe/H]}}$ distributions of the whole galaxy (grey), and its previously accreted stars with different orbit energies as given in Table \ref{tab:energy_selection} (more negative energies from red to yellow, as shown in the inset panel of $L_Z$ vs. $E$). The percentiles of each distribution are plotted at the top right of the figure and show an increase of average [Fe/H] with more negative energies. See \href{https://github.com/svenbuder/gse_nihaouhd/tree/main/figures}{\faGithub} for individual figures showing the build-up of this plot.}
+    \label{fig:fe_h_histograms}
+\end{figure}
 
 These four samples, selected to have roughly 25\% of accreted stars in each of them, now allow us to investigate the memory or different properties across different orbit energies. In particular, we are interested in the change of the (i)~overall metallicity [Fe/H], (ii)~chemical abundances, (iii)~present-day positions, and (iv)~birth positions, which we analyse separately below.
 
@@ -344,7 +333,7 @@ For the often used diagnostic plot of accreted stars, [Al/Fe] vs. [Mg/Mn], we fi
 
 Across all figures we find that the median abundance trends between different energy levels are rather similar and less pronounced than the observational trends found by \citet{Skuladottir2025}. Secondly, we find that the abundances tend to not exactly follow a linear trend, as fitted by \citet{Skuladottir2025}, but a more complex, non-linear behaviour. In combination with the different [Fe/H] distributions of the different energy samples, this leads to noticeable differences in the median abundances though. Especially when comparing the with the abundances trends for the lower energy cuts by \citet[][their Fig.~5]{Skuladottir2025}, we find very good agreement in the relative abundance changes between their lower and higher energy samples, in particular for the highest [Fe/H] regime.
 
-As the simulation necessarily relies on specific choices for nucleosynthesis channels and stellar yields, we note that both the absolute abundance differences between accreted and in-situ populations and the intrinsic abundance spreads within each population are significantly smaller than observed in the Milky Way. This highlights a general caveat of our analysis: while the relative trends are informative, the absolute abundance scales and dispersions should not be over-interpreted, as they are sensitive to the adopted yields and chemical-evolution prescriptions.
+As the simulation necessarily relies on specific choices for nucleosynthesis channels and stellar yields, we note that both the absolute abundance differences between accreted and in-situ populations and the intrinsic abundance spreads within each population are significantly smaller than observed in the Milky Way. This highlights a general caveat of our analysis: while the relative trends are informative, the absolute abundance scales and dispersions should not be over-interpreted, as they are sensitive to the adopted yields and chemical-evolution prescriptions \citep[see][for machine learning methods and model comparison approaches to select chemical enrichment models]{Buck2025,Guenes2025}.
 
 \subsubsection{Orbit memory of present-day positions}
 
@@ -362,7 +351,7 @@ Having found that the orbit energy is correlated with metallicity and elemental 
 
 A major motivation of our study is to investigate if there is any memory of the birth positions of accreted stars left in their orbits. \citet{Skuladottir2025} approached this question forward-looking, by tagging the radius of particles within the smaller galaxy in the simulation by \citet{Mori2024} before the merger and then tracing the time of pericenter passages and present-day orbit properties. In a variation of this approach, our post-processing of birth positions allows us to simply use the birth positions and colour them by their present-day orbit energies. By focussing on two specific regions of birth positions in the $X_\mathrm{birth}$ vs. $Y_\mathrm{birth}$ direction in Fig.~\ref{fig:fellowship_and_mount_doom}, we are effectively tracing the star formation (with a resolution of $\sim 100\,\mathrm{Myr}$) of the galaxy long before the merger (Fig.~\ref{fig:fellowship_and_mount_doom}a, showing star formation between 11.65 and $10.25\,\mathrm{Gyr}$ ago), as well as before and during the merger (Fig.~\ref{fig:fellowship_and_mount_doom}b, showing star formation between 10.15 and $8.55\,\mathrm{Gyr}$ ago) with the main galaxy (grey background).
 
-A striking feature of basically all de-facto snapshots of star formation is that the stars born in the outskirts now have high orbit energies (are coloured red), while the stars in the centres of each $100\,\mathrm{Myr}$ snapshot have low orbit energies (yellow). This is fully consistent with the conclusion drawn by \citet{Skuladottir2025} that stars born in the outskirts of the accreted galaxy have higher orbit energies and stars born in its core have lower orbit energies.
+A striking feature of basically all de-facto snapshots of star formation is that the stars born in the outskirts of the progenitor now have high orbit energies (are coloured red), while the stars in the centre of the progenitor in each $100\,\mathrm{Myr}$ snapshot have low orbit energies (yellow). This is fully consistent with the conclusion drawn by \citet{Skuladottir2025} that stars born in the outskirts of the accreted galaxy have higher orbit energies and stars born in its core have lower orbit energies.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -376,7 +365,7 @@ In this paper (Paper~I), we posed three key questions regarding the information 
 
 Our investigations in Section~\ref{sec:analysis_dynamic_properties} showed that the true extent of accreted stars in the simulated Milky Way analogue extends far into the inner galaxy, which is dominated by in-situ stars. This dominance explains why current observational research on the extent of accreted stars has identified a rather sharp transition at specific orbit energies or radial actions between in-situ and accreted stars of the \textit{GSE} \citep{Helmi2018, Feuillet2021, Monty2024}.
 
-However, our results show that significantly more accreted stars are present with energies and radial actions below the observationally suggested limits in $E$ \citep{Helmi2018, Monty2024} and $J_R$ \citep{Feuillet2020, Feuillet2021}. Importantly, we find \input{tex/mass_accreted_fraction} and \input{tex/mass_accreted_fraction_lz_jr} of the accreted stars in regions that are dominated by in-situ stars on these low-energy orbits. The dynamical overlap of in-situ and accreted structures is significant and spectroscopic, that is, chemical insights are needed to separate in-situ from accreted stars \citep[for example][]{Das2020, Horta2021, Buder2022}.
+However, our results show that significantly more accreted stars are present with energies and radial actions below the observationally suggested limits in $E$ \citep{Helmi2018, Monty2024} and $J_R$ \citep{Feuillet2020, Feuillet2021}. Importantly, we find \input{tex/mass_accreted_fraction} and \input{tex/mass_accreted_fraction_lz_jr} of the accreted stars in regions that are dominated by in-situ stars on these low-energy orbits. The dynamical overlap of in-situ and accreted structures is significant and spectroscopic, that is, chemical insights are needed to separate in-situ from accreted stars \citep[for example][]{Das2020, Horta2021, Sestito2021, Buder2022}.
 
 While several accreted stars and even structures have been found in the inner Galaxy thanks to infrared spectroscopy \citep[for example][]{Horta2021}, this regions remains mostly out-of-reach for high-precision optical spectroscopy and partially even astrometry \citep{Queiroz2023}.
 
@@ -413,9 +402,21 @@ Subsequently we discuss why such observations could be key for our understanding
 
 What could be the potential impact of missing out on the hidden low-energy members of the \textit{GSE}? The detailed impact of the major merger will lie in the impact of the accreted gas and stars onto the chemical make-up and rotation of the Galaxy as well as the merger configuration and pathway. Two general galaxy properties -- galaxy mass or mean metallicity -- are often used to quantify a galaxy and its potential impact during a merger. With the observationally found mass-metallicity relation \citep[for example][]{Gallazzi2005, Kirby2013}, these numbers are correlated and allow to roughly estimate the mass of a system from its metallicity and vice versa. In the Milky Way, this relation has been confirmed with surviving smaller galaxies \citep{Kirby2013} and then used to estimate the masses of disrupted galaxies by comparison \citep[for example][]{Helmi2018} -- in addition to dynamical mass estimates from simulations that recovered the dynamical signatures of the disrupted galaxies \citep[for example][]{Naidu2022b}.
 
-By comparing the mass-metallicity relations of observed surviving and (partially or fully) disrupted dwarf galaxies, \citet{Naidu2022b} uncovered a significant offset between them, with the latter's metallicities being on average 0.30 lower, thus questioning the universality of the mass-metallicity relation. If the selection efficiency described in the prior section is indeed biased, this raises the question, if this bias is possibly, at least partially, introduced by selection biases. Beyond the biases for \textit{GSE} \citep{Skuladottir2025}, we are wondering if the [Fe/H] estimates of surviving dwarf galaxies could be biased by the analysis of stars in their cores (and less so their outskirts), whereas the [Fe/H] estimates of disrupted dwarf galaxies could be biased towards lower values by the stars in their previous outskirts, rather than their more metal-rich cores (which our simulations suggest to be more likely embedded in the inner galaxy regions dominated by in-situ stars). To visualise this point, we are recreating the mass-metallicity relation as shown by \citet{Naidu2022b} in Fig.~\ref{fig:mzr_different_selections}. To this figure, we add the median [Fe/H] values for the four different energy zones of the accreted stars in our simulation (with yellow to dark red corresponding to the lowest to highest energy zones from Fig.~\ref{fig:fe_h_histograms}). We indeed see that when selecting preferentially (or even only) the the higher energy samples, we tend to infer a lower [Fe/H]. The lower-energy samples would increase the average median [Fe/H]. We also notice that shape -- in particular the non-Gaussianity -- of the metallicity distribution functions of a galaxy needs to be included into this figure for both surviving and disrupted dwarf galaxies, rather than the currently used mean or median [Fe/H].
+By comparing the mass-metallicity relations of observed surviving and (partially or fully) disrupted dwarf galaxies, \citet{Naidu2022b} uncovered a significant offset between them, with the latter's metallicities being on average 0.30\,dex lower, thus questioning the universality of the mass-metallicity relation. If the selection efficiency described in the prior section is indeed biased, this raises the question, if this bias is possibly, at least partially, introduced by selection biases. Beyond the biases for \textit{GSE} \citep{Skuladottir2025}, we are wondering if the [Fe/H] estimates of surviving dwarf galaxies could be biased by the analysis of stars in their cores (and less so their outskirts), whereas the [Fe/H] estimates of disrupted dwarf galaxies could be biased towards lower values by the stars in their previous outskirts, rather than their more metal-rich cores (which our simulations suggest to be more likely embedded in the inner galaxy regions dominated by in-situ stars). To visualise this point, we are recreating the mass-metallicity relation as shown by \citet{Naidu2022b} in Fig.~\ref{fig:mzr_different_selections}. To this figure, we add the median [Fe/H] values for the four different energy zones of the accreted stars in our simulation (with yellow to dark red corresponding to the lowest to highest energy zones from Fig.~\ref{fig:fe_h_histograms}). We indeed see that when selecting preferentially (or even only) the the higher energy samples, we tend to infer a lower [Fe/H]. The lower-energy samples would increase the average median [Fe/H]. We also notice that shape -- in particular the non-Gaussianity -- of the metallicity distribution functions of a galaxy needs to be included into this figure for both surviving and disrupted dwarf galaxies, rather than the currently used mean or median [Fe/H].
 
-In a future project, we will perform a detailed re-assessment of the mass-metallicity relation under full consideration of the metallicity distributions and inclusion of potential biases of both disrupted and surviving dwarf galaxies.% This will for example also include the assessment of the bias expected from including or neglecting leading and trailing arms of systems that are currently being accreted \citep[for example Sgr as studied by][]{Hayes2020} and the radial metallicity gradients of dwarf galaxies to quantify the importance of focusing on either only core or outskirts and thus further understand the current differences in and universality of the mass-metallicity relation of dwarf galaxies. This will be weighed against the evolution of the mass-metallicity relation over cosmic time \citep[see e.g. Fig.~5 by][]{Buck2021}.
+To estimate the potential impact of systematic offsets in inferred metallicities, we invert published stellar mass–metallicity relations for dwarf galaxies. Following \citet{Naidu2022b}, we adopt either their relation for disrupted dwarfs (their Eq.~3),
+\begin{align}
+\qquad\qquad    \log_{10} (M_\star/\mathrm{M_\odot}) &= 2.78 \times \mathrm{[Fe/H]} + 11.86 , \label{eq:naidu}
+\end{align}
+or the relation for surviving dwarfs from \citet{Kirby2013}, shifted by $-0.30\,\mathrm{dex}$,
+\begin{align}
+\qquad\qquad    \log_{10} (M_\star/\mathrm{M_\odot}) &= 3.33 \times \mathrm{[Fe/H]} + 12.63 . \label{eq:kirby}
+\end{align}
+
+Inserting the median $\mathrm{[Fe/H]}$ values of the four orbital-energy zones, we infer the logarithmic stellar masses of $\log_{10}(M_\star/\mathrm{M_\odot}) \simeq 7.9$–$9.5$ listed in Tab.~\ref{tab:energy_selection}. This range spans $\sim$1.6 dex, that is, a factor of $\sim$40 in stellar mass, depending on which part of the progenitor is sampled. 
+
+This exercise illustrates that chemically inferred stellar masses are highly sensitive to the adopted metallicity distribution and to the choice of mass–metallicity relation. In a future project, we will therefore re-assess the mass–metallicity relation in detail, accounting for full metallicity distributions and for potential systematic differences between disrupted and surviving dwarf galaxies.
+% This will for example also include the assessment of the bias expected from including or neglecting leading and trailing arms of systems that are currently being accreted \citep[for example Sgr as studied by][]{Hayes2020} and the radial metallicity gradients of dwarf galaxies to quantify the importance of focusing on either only core or outskirts and thus further understand the current differences in and universality of the mass-metallicity relation of dwarf galaxies. This will be weighed against the evolution of the mass-metallicity relation over cosmic time \citep[see e.g. Fig.~5 by][]{Buck2021}.
 
 \begin{figure}
     \centering
@@ -471,14 +472,13 @@ The used simulation snapshot can be publicly accessed as FITS file via \url{http
 
 \section*{Software}
 
-The research for this publication was coded in \textsc{python} (version 3.12.11) and included its packages
+\textsc{python} (version 3.12.11) and included its packages
 \textsc{astropy} \citep[v. 7.1.0;][]{Robitaille2013,PriceWhelan2018},
 \textsc{hyppo} \citep[v. 0.5.2;][]{hyppo},
 \textsc{IPython} \citep[v. 9.1.0;][]{ipython},
 \textsc{matplotlib} \citep[v. 3.10.3;][]{matplotlib},
 \textsc{NumPy} \citep[v. 2.2.6;][]{numpy}, as well as
-\textsc{scipy} \citep[v. 1.16.0;][]{Scipy}.
-We further made use of \textsc{topcat} \citep[version 4.7;][]{Taylor2005};
+\textsc{scipy} \citep[v. 1.16.0;][]{Scipy}; \textsc{topcat} \citep[version 4.7;][]{Taylor2005};
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -492,27 +492,28 @@ We further made use of \textsc{topcat} \citep[version 4.7;][]{Taylor2005};
 
 \section{Additional Information}
 
-\begin{figure}
-    \centering
-    % \includegraphics[width=0.49\linewidth]{figures/fraction_accreted_in_situ_lz.png}
-    \includegraphics[width=\columnwidth]{figures/fraction_accreted_in_situ_lz_e_total.png}
-    % \includegraphics[width=0.49\linewidth]{figures/fraction_accreted_in_situ_lz_jr.png}
-    \includegraphics[width=\columnwidth]{figures/fraction_accreted_in_situ_lz_jr_total.png}
-    \caption{A version of Fig.~\ref{fig:fraction_accreted_in_situ_lz}, but calculating fractions with respect to all star particles.}
-    \label{fig:fraction_accreted_in_situ_lz_total}
-\end{figure}
-
 \begin{table*}
     \centering
     \caption{Spatial and age selection used to identify individual (and clean) overdensities in birth positions for Fig.~\ref{fig:tracing_xyz_birth_3}.}
+    \renewcommand{\arraystretch}{0.9}
     \input{tables/birth_position_tabular}
     \label{tab:birth_position_tabular}
 \end{table*}
 
 \begin{figure*}
     \centering
-    \includegraphics[width=\textwidth]{figures/xz_distribution_ezones.png}
-    \caption{Present-day spatial distribution of accreted stars in the Galactocentric $X$-$Z$ plane. Panels a-d) show the density distribution of accreted stars with highest to lowest orbit energy quantiles. Panel legends list the 50th and 16th-84th percentiles of galactocentric height $Z$. Panel e) shows the absolute galactocentric height $\vert Z \vert$ distribution, and the inset visualises the $L_Z$ vs. $E$ selection \href{https://github.com/svenbuder/gse_nihaouhd/tree/main/figures}{\faGithub}.}
+    \includegraphics[width=0.49\linewidth]{figures/fraction_accreted_in_situ_lz_e_total.png}
+    % \includegraphics[width=\columnwidth]{figures/fraction_accreted_in_situ_lz_e_total.png}
+    \includegraphics[width=0.49\linewidth]{figures/fraction_accreted_in_situ_lz_jr.png}
+    % \includegraphics[width=\columnwidth]{figures/fraction_accreted_in_situ_lz_jr_total.png}
+    \caption{A version of Fig.~\ref{fig:fraction_accreted_in_situ_lz}, but calculating fractions with respect to all star particles.}
+    \label{fig:fraction_accreted_in_situ_lz_total}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.99\textwidth]{figures/xz_distribution_ezones.png}
+    \caption{Same as Fig.~\ref{fig:xy_distribution_ezones}, but for $X$-$Z$ dimensions \href{https://github.com/svenbuder/gse_nihaouhd/tree/main/figures}{\faGithub}.}
     \label{fig:xz_distribution_ezones}
 \end{figure*}
 
@@ -560,10 +561,8 @@ We further made use of \textsc{topcat} \citep[version 4.7;][]{Taylor2005};
     \item We provide both the initial selection and resulting average spatial and age ranges of the major accreted structure in Tab.~\ref{tab:birth_position_tabular}.
     \item Fig.~\ref{fig:fraction_accreted_in_situ_lz_total} shows the same distribution of stars in bins of $L_Z$ vs. $E$ and $L_Z$ vs. $\sqrt{J_R}$ as Fig.~\ref{fig:fraction_accreted_in_situ_lz}. In this version, we include ongoing accretion in addition to past accretion and in-situ formation when calculating the fractional contribution for each bin. 
     \item Fig.~\ref{fig:xz_distribution_ezones} shows the spatial distribution of accreted stars as Fig.~\ref{fig:xy_distribution_ezones}, but for the $X-Z$ direction.
-      \item Fig.\ref{fig:additional_xfe_feh_zones} includes the chemical distribution of accreted stars beyond the ones already shown in Fig.~\ref{fig:xfe_feh_zones}. In addition to $\log(\mathrm{O/H}) + 12$ vs. $\log(\mathrm{N/O})$, they include the alpha-process elements O, Ne, Si, and S (behaving like the alpha-process element Mg), the odd-Z elements Na, Cl, and Cu (behaving like the odd-Z element Al), the iron-peak element Mn (behaving like the iron-peak element Ni), the neutron-capture elements Y, Ce, and Eu (behaving like the neutron-capture element Ba). For completeness, we also include C, Ti, and Zn. We neglect He, because it is modelled as a linear function of [Fe/H].
+    \item Fig.\ref{fig:additional_xfe_feh_zones} includes the chemical distribution of accreted stars beyond the ones already shown in Fig.~\ref{fig:xfe_feh_zones}. They include the alpha-process elements O, Ne, Si, and S (behaving like the alpha-process element Mg), the odd-Z elements Na, Cl, and Cu (behaving like the odd-Z element Al), the iron-peak element Mn (behaving like the iron-peak element Ni), the neutron-capture elements Y, Ce, and Eu (behaving like the neutron-capture element Ba). For completeness, we also include C, N, Ti, and Zn. We neglect He, because it is modelled as a linear function of [Fe/H].
 \end{enumerate}
-
-
 
 \bsp
 \label{lastpage}
