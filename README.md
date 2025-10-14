@@ -32,15 +32,14 @@ Please cite this work as follows:
     author = {{Buder}, Sven and {Buck}, Tobias and {Sk\'ulad\'ottir}, \'Asa and {Ness}, Melissa and {McKenzie}, Madeleine and {Monty}, Stephanie},
     title = {The chemodynamical memory of a major merger in a NIHAO-UHD Milky Way analogue I: A golden thread through time and space},
     journal = {arXiv e-prints},
-    volume = {abs/2510.XXXXX},
-    month = dec,
-    pages = {arXiv:2510.XXXXX},
-    year = {2025},
+    year = 2025,
+    month = oct,
+    pages = {arXiv:2510.11284},
     archivePrefix = {arXiv},
-    eprint = {2510.XXXXX},
+    eprint = {2510.11284},
     keywords = {Galaxy: evolution -- Galaxy: formation -- Galaxy: structure -- Galaxy: abundances -- Galaxy: kinematics and dynamics},
-    doi = {10.48550/arXiv.2510.XXXXX},
+    doi = {10.48550/arXiv.2510.11284},
     primaryClass = {astro-ph.GA},
-    adsurl = {https://ui.adsabs.harvard.edu/abs/2025arXiv2510XXXXXB}
+    adsurl = {https://ui.adsabs.harvard.edu/abs/2510arXiv251011284B}
 }
 ```
