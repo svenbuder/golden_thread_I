@@ -21,7 +21,7 @@ The used simulation snapshot can be publicly accessed as FITS file via https://g
 
 ## Authors
 
-Sven Buder (ANU Canberra, sven.buder@anu.edu.au), Tobias Buck (IWR Heidelberg), \'Asa Sk\'ulad\'ottir (University Florence), Melissa Ness (ANU Canberra), Madeleine McKenzie (Carnegie Observatories Pasadena), and Stephanie Monty (IoA Cambridge)
+Sven Buder (ANU Canberra, sven.buder@anu.edu.au), Tobias Buck (IWR Heidelberg), Ása Skúladóttir (University Florence), Melissa Ness (ANU Canberra), Madeleine McKenzie (Carnegie Observatories Pasadena), and Stephanie Monty (IoA Cambridge)
 
 ## How to Cite
 
