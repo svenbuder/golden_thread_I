@@ -84,7 +84,7 @@ $^{7}$Department of Astronomy, New Mexico State University, Las Cruces, NM 88003
 \maketitle
 
 \begin{abstract} % ~250 words
-Understanding how the Milky Way's present-day structure was shaped by past major mergers is a key goal of Galactic archaeology. The chemical and dynamical structure of the Galaxy retains the imprint of such events, including a major accretion episode around 8--10 Gyr ago. Recent findings suggest that present-day orbital energy correlates with stellar chemistry and birth location within the merging progenitor galaxy. Using a high-resolution NIHAO-UHD cosmological zoom-in simulation of a Milky Way analogue, we trace the birth positions, ages, and present-day orbits of stars accreted in its last major merger. We show that stars born in the progenitor's core are more tightly bound to the Milky Way and chemically enriched, while those from the outskirts are less bound and metal-poor. \changed{This confirms in a cosmological context the scenario proposed by Sk\'ulad\'ottir et al.\ (2025). Quantitatively, we measure a metallicity gradient with progenitor birth radius of $\mathrm{d[Fe/H]}/\mathrm{d}R_\mathrm{birth}^\prime \approx -0.05\,\mathrm{dex\,kpc^{-1}}$, demonstrating that chemical abundance patterns retain measurable memory of formation location within the disrupted satellite.} The preserved chemodynamical memory is also evident in elemental planes such as [Al/Fe] vs.\ [Mg/Mn], \changed{which reflect gradients in star formation efficiency within the progenitor.} \changed{We further show that commonly used selection methods in integrals-of-motion space systematically miss stars originating from the chemically enriched core of the progenitor, biasing reconstructions toward its metal-poor outskirts.} \changed{Together, our results demonstrate that chemodynamical memory survives the merger and can be used to reconstruct the internal structure of the accreted galaxy while highlighting biases affecting current observational selections of accreted stars.}
+Understanding how the Milky Way's present-day structure was shaped by past major mergers is a key goal of Galactic archaeology. The chemical and dynamical structure of the Galaxy retains the imprint of such events, including a major accretion episode around 8--10 Gyr ago. Recent findings suggest that present-day orbital energy correlates with stellar chemistry and birth location within the merging progenitor galaxy. Using a high-resolution NIHAO-UHD cosmological zoom-in simulation of a Milky Way analogue, we trace the birth positions, ages, and present-day orbits of stars accreted in its last major merger. We show that stars born in the progenitor's core are more tightly bound to the Milky Way and chemically enriched, while those from the outskirts are less bound and \changed{more} metal-poor. \changed{This supports in a cosmological context the scenario proposed by Sk\'ulad\'ottir et al.\ (2025). Quantitatively, we measure a metallicity gradient with progenitor birth radius of $\mathrm{d[Fe/H]}/\mathrm{d}R_\mathrm{birth}^\prime \approx -0.05\,\mathrm{dex\,kpc^{-1}}$, demonstrating that chemical abundance patterns retain measurable memory of formation location within the disrupted satellite.} The preserved chemodynamical memory is also evident in elemental planes such as [Al/Fe] vs.\ [Mg/Mn], \changed{consistent with gradients in star formation efficiency within the progenitor.} \changed{We further show that commonly used selections in integrals-of-motion space systematically miss stars originating from the chemically enriched core of the progenitor, biasing reconstructions toward its metal-poor outskirts.} \changed{Together, our results demonstrate that chemodynamical memory survives the merger and can be used to reconstruct the internal structure of the accreted galaxy, while highlighting biases affecting current observational selections of accreted stars.}
 \end{abstract}
 
 \begin{keywords}
@@ -486,7 +486,7 @@ Because of the low number of only 33 targets, \citet{Skuladottir2025} could only
 
 Because of the changing metallicity distribution function and some non-linear trends in [X/Fe] in our larger -- but simulated -- sample, we believe that future investigation of observed abundance trends -- in the best case with larger samples across a diverse energy range -- should aim to go beyond the fitting of linear trends to these distributions as done by \citet{Skuladottir2025}.
 
-\changed{\subsection{Metallicity gradient of the \textit{GSE} progenitor}}
+\subsection{\changed{Metallicity gradient of the \textit{GSE} progenitor}}
 \label{sec:discussion_gradient}
 
 Our investigations confirm the conclusions drawn by \citet{Skuladottir2025}, that the lower-energy stars were born in the inner parts of the now-accreted galaxy, whereas higher-energy stars were born in its outskirts. \changed{Taken together, these correlations imply that the \textit{GSE} progenitor hosted a measurable internal radial metallicity gradient prior to its merger with the Milky Way.}
@@ -564,9 +564,9 @@ The used simulation snapshot can be publicly accessed as FITS file via \url{http
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.49\linewidth]{figures/fraction_accreted_in_situ_lz_e_total.png}
+    \includegraphics[width=0.47\linewidth]{figures/fraction_accreted_in_situ_lz_e_total.png}
     % \includegraphics[width=\columnwidth]{figures/fraction_accreted_in_situ_lz_e_total.png}
-    \includegraphics[width=0.49\linewidth]{figures/fraction_accreted_in_situ_lz_jr_total.png}
+    \includegraphics[width=0.47\linewidth]{figures/fraction_accreted_in_situ_lz_jr_total.png}
     % \includegraphics[width=\columnwidth]{figures/fraction_accreted_in_situ_lz_jr_total.png}
     \caption{A version of Fig.~\ref{fig:fraction_accreted_in_situ_lz}, but calculating fractions with respect to all star particles \href{https://github.com/svenbuder/golden_thread_I/tree/main/figures}{\faGithub}.}
     \label{fig:fraction_accreted_in_situ_lz_total}
@@ -574,7 +574,7 @@ The used simulation snapshot can be publicly accessed as FITS file via \url{http
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.98\textwidth]{figures/xz_distribution_ezones.png}
+    \includegraphics[width=0.95\textwidth]{figures/xz_distribution_ezones.png}
     \caption{Same as Fig.~\ref{fig:xy_distribution_ezones}, but for $X$-$Z$ dimensions \href{https://github.com/svenbuder/golden_thread_I/tree/main/figures}{\faGithub}.}
     \label{fig:xz_distribution_ezones}
 \end{figure*}
